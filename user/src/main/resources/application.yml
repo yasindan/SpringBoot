@@ -1,0 +1,16 @@
+spring:
+  application:
+    name: user
+server:
+  port: 7000
+ribbon:
+  eureka:
+    enabled: true
+eureka:
+  instance:
+    hostname: 192.168.5.145
+  client:
+    register-with-eureka: true
+    fetch-registry: false
+    service-url:
+      defaultZone: http://192.168.5.145:1111/eureka/
