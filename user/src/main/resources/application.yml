@@ -8,9 +8,9 @@ ribbon:
     enabled: true
 eureka:
   instance:
-    hostname: 192.168.5.145
+    hostname: 127.0.0.1
   client:
     register-with-eureka: true
     fetch-registry: false
     service-url:
-      defaultZone: http://192.168.5.145:1111/eureka/
+      defaultZone: http://127.0.0.1:1111/eureka/

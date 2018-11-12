@@ -18,7 +18,7 @@ public class HelloController {
 
     @RequestMapping(value = "/info")
     public String index(){
-        return "Hello xiaoxi !";
+        return "Hello xiaoxi!";
     }
 
 }
