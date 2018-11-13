@@ -15,7 +15,7 @@ public class UserService {
     @Autowired
     private RedisTemplate<String, Object> redisTemplate;
     public void set(String key, User user) {
-        redisTemplate.opsForValue().set(key, user);
+        redisTemplate.opsForValue().set(key, user,60000, TimeUnit.SECONDS);
     }
     public User get(String key) {
         return (User) redisTemplate.boundValueOps(key).get();
