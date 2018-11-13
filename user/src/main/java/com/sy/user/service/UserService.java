@@ -21,7 +21,7 @@ public class UserService {
         return (User) redisTemplate.boundValueOps(key).get();
     }
     public void setCode(String key, String code) {
-        stringRedisTemplate.opsForValue().set(key, code, 60, TimeUnit.SECONDS);
+        stringRedisTemplate.opsForValue().set(key, code, 600000, TimeUnit.SECONDS);
     }
     public String getCode(String key) {
         return stringRedisTemplate.boundValueOps(key).get();
