@@ -23,7 +23,7 @@ public class RedisController {
     }
     @GetMapping("stringset")
     public void stringset() {
-        userService.setCode("stringkey", "meepoguan_coke");
+        userService.setCode("stringkey", "guoxiaoxi");
     }
     @GetMapping("stringget")
     public String stringget() {
