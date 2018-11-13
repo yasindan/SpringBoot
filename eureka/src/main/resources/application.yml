@@ -6,11 +6,6 @@ server:
 eureka:
   instance:
     hostname: localhost
-    preferIpAddress: true
-    ipAddress: 47.101.45.123
-    nonSecurePort: 80
-    lease-renewal-interval-in-seconds: 10
-    lease-expiration-duration-in-seconds: 90
   client:
     registerWithEureka: false
     fetchRegistry: false
