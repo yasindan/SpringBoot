@@ -1,6 +1,6 @@
 package com.sy.user.controller;
 
-import com.sy.user.enums.User;
+import com.sy.user.dto.User;
 import com.sy.user.service.UserService;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;

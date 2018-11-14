@@ -27,14 +27,14 @@ public class UserController {
 
     @RequestMapping(value = {"/update/{id}/{name}/{password}/{sex}"}, method = RequestMethod.GET)
     @ResponseBody
-    public int updateUser(@PathVariable long id, @PathVariable String name, @PathVariable String password, @PathVariable String sex){
+    public int updateUser(@PathVariable int id, @PathVariable String name, @PathVariable String password, @PathVariable String sex){
         UserInfo userInfo = new UserInfo(id, name, sex, password);
         return userService.updateUser(userInfo);
     }
 
     @RequestMapping(value = {"/select/id/{id}"}, method = RequestMethod.GET)
     @ResponseBody
-    public List<UserInfo> selectUserById(@PathVariable long id){
+    public List<UserInfo> selectUserById(@PathVariable int id){
         UserInfo userInfo = new UserInfo(id);
         return userService.selectUserById(userInfo);
     }
@@ -55,7 +55,7 @@ public class UserController {
 
     @RequestMapping(value = {"/delete/id/{id}"}, method = RequestMethod.GET)
     @ResponseBody
-    public int deleteUserById(@PathVariable long id){
+    public int deleteUserById(@PathVariable int id){
         UserInfo userInfo = new UserInfo(id);
         return userService.deleteUserById(userInfo);
     }

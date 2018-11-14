@@ -1,4 +1,4 @@
-package com.sy.user.enums;
+package com.sy.user.dto;
 
 import java.io.Serializable;
 

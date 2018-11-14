@@ -1,6 +1,6 @@
 package com.sy.user.service;
 
-import com.sy.user.enums.User;
+import com.sy.user.dto.User;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.data.redis.core.StringRedisTemplate;

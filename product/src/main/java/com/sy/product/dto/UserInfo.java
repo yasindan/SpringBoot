@@ -2,7 +2,7 @@ package com.sy.product.dto;
 
 public class UserInfo {
 
-    private Long userId;
+    private int userId;
 
     private String userName;
 
@@ -10,11 +10,11 @@ public class UserInfo {
 
     private String password;
 
-    public Long getUserId() {
+    public int getUserId() {
         return userId;
     }
 
-    public void setUserId(Long userId) {
+    public void setUserId(int userId) {
         this.userId = userId;
     }
 
@@ -42,7 +42,7 @@ public class UserInfo {
         this.password = password;
     }
 
-    public UserInfo(Long userId, String userName, String userSex, String password) {
+    public UserInfo(int userId, String userName, String userSex, String password) {
         this.userId = userId;
         this.userName = userName;
         this.userSex = userSex;
@@ -56,7 +56,7 @@ public class UserInfo {
     }
 
 
-    public UserInfo(Long userId) {
+    public UserInfo(int userId) {
         this.userId = userId;
     }
 
