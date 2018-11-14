@@ -11,11 +11,19 @@ eureka:
     fetch-registry: false
     service-url:
       defaultZone: http://127.0.0.1:1111/eureka/
------
+mybatis:
+  typeAliasesPackage: com.xdd.entity
+  mapperLocations: classpath:mapper/*.xml
+---
 spring:
   profiles: dev
   redis:
     host: 172.19.178.227
     port: 6379
     password: redis
+  datasource:
+    url: jdbc:mysql://47.101.45.123:3306/test
+    username: root
+    password: yasin
+    driver-class-name: com.mysql.jdbc.Driver
 eureka.client.serviceUrl.defaultZone: http://172.19.178.227:1111/eureka/

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.sy.product.mapper.UserMapper">
+    <resultMap id="BaseResultMap" type="com.sy.product.dto.UserInfo">
+        <result column="USER_ID" property="userId" jdbcType="DECIMAL"/>
+        <result column="USER_NAME" property="userName" jdbcType="VARCHAR"/>
+        <result column="USER_SEX" property="userSex" jdbcType="VARCHAR"/>
+        <result column="PASSWORD" property="password" jdbcType="VARCHAR"/>
+    </resultMap>
+
+    <insert id="insertUser" parameterType="com.sy.product.dto.UserInfo">
+INSERT INTO USER_INFO VALUES ('xiaoxi', '123456', 'women');
+    </insert>
+
+    <delete id="deleteUser" parameterType="com.sy.product.dto.UserInfo">
+DELETE FROM USER_INFO WHERE USERNAME = 'xiaoxi' ;
+    </delete>
+
+    <select id="selectUser" resultMap="BaseResultMap" parameterType="com.sy.product.dto.UserInfo">
+select * from USER_INFO;
+    </select>
+
+    <update id="updateUser" parameterType="com.sy.product.dto.UserInfo">
+UPDATE USER_INFO SET PASSWOED = '654321' WHERE USERNAME = 'xiaoxi' ;
+    </update>
+
+</mapper>
