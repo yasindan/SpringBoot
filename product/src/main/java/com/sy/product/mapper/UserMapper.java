@@ -12,7 +12,13 @@ public interface UserMapper {
 
     int updateUser(UserInfo userInfo);
 
-    List<UserInfo> selectUser(UserInfo userInfo);
+    List<UserInfo> selectUserById (UserInfo userInfo);
 
-    int deleteUser(UserInfo userInfo);
+    List<UserInfo> selectUserByName (UserInfo userInfo);
+
+    List<UserInfo> selectUserBySex (UserInfo userInfo);
+
+    int deleteUserByName (UserInfo userInfo);
+
+    int deleteUserById (UserInfo userInfo);
 }

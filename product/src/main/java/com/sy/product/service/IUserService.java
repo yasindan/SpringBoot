@@ -1,17 +1,23 @@
 package com.sy.product.service;
 
 import com.sy.product.dto.UserInfo;
-import org.springframework.stereotype.Service;
 
 import java.util.List;
 
 public interface IUserService {
 
-    int insertUser(UserInfo userInfo);
+    Integer insertUser(UserInfo userInfo);
 
-    int updateUser(UserInfo userInfo);
+    Integer updateUser(UserInfo userInfo);
 
-    List<UserInfo> selectUser(UserInfo userInfo);
+    List<UserInfo> selectUserById (UserInfo userInfo);
 
-    int deleteUser(UserInfo userInfo);
+    List<UserInfo> selectUserByName (UserInfo userInfo);
+
+    List<UserInfo> selectUserBySex (UserInfo userInfo);
+
+    Integer deleteUserByName(UserInfo userInfo);
+
+    Integer deleteUserById(UserInfo userInfo);
+
 }

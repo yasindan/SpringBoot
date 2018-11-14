@@ -32,32 +32,38 @@ public class UserController {
         return userService.updateUser(userInfo);
     }
 
-    @RequestMapping(value = {"/select/{id}"}, method = RequestMethod.GET)
+    @RequestMapping(value = {"/select/id/{id}"}, method = RequestMethod.GET)
     @ResponseBody
     public List<UserInfo> selectUserById(@PathVariable long id){
         UserInfo userInfo = new UserInfo(id);
-        return userService.selectUser(userInfo);
+        return userService.selectUserById(userInfo);
     }
 
-    @RequestMapping(value = {"/select/{name}"}, method = RequestMethod.GET)
+    @RequestMapping(value = {"/select/name/{name}"}, method = RequestMethod.GET)
     @ResponseBody
     public List<UserInfo> selectUserByName(@PathVariable String name){
         UserInfo userInfo = new UserInfo(name);
-        return userService.selectUser(userInfo);
+        return userService.selectUserByName(userInfo);
     }
 
-    @RequestMapping(value = {"/select/{id}"}, method = RequestMethod.GET)
+    @RequestMapping(value = {"/select/sex/{sex}"}, method = RequestMethod.GET)
+    @ResponseBody
+    public List<UserInfo> selectUserBySex(@PathVariable String name){
+        UserInfo userInfo = new UserInfo(name);
+        return userService.selectUserBySex(userInfo);
+    }
+
+    @RequestMapping(value = {"/delete/id/{id}"}, method = RequestMethod.GET)
     @ResponseBody
     public int deleteUserById(@PathVariable long id){
         UserInfo userInfo = new UserInfo(id);
-        return userService.deleteUser(userInfo);
+        return userService.deleteUserById(userInfo);
     }
 
-
-    @RequestMapping(value = {"/select/{name}"}, method = RequestMethod.GET)
+    @RequestMapping(value = {"/delete/name/{name}"}, method = RequestMethod.GET)
     @ResponseBody
     public int deleteUserByName(@PathVariable String name){
         UserInfo userInfo = new UserInfo(name);
-        return userService.deleteUser(userInfo);
+        return userService.deleteUserByName(userInfo);
     }
 }
