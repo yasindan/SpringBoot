@@ -1,6 +1,15 @@
 spring:
   application:
     name: product
+  redis:
+    host: 127.0.0.1
+    port: 6379
+    password: redis
+  datasource:
+    url: jdbc:mysql://47.101.45.123:3306/test
+    username: root
+    password: yasin
+    driver-class-name: com.mysql.jdbc.Driver
 server:
   port: 7001
 eureka:

@@ -1,9 +1,10 @@
 package com.sy.product.mapper;
 
 import com.sy.product.dto.UserInfo;
+import org.apache.ibatis.annotations.Mapper;
 
 import java.util.List;
-
+@Mapper
 public interface UserMapper {
 
 
