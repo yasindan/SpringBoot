@@ -1,9 +1,8 @@
 spring:
   application:
-    name: eureka
+    name: sy-eureka
 server:
   port: 8000
-  contextPath:
 eureka:
   instance:
     hostname: localhost
@@ -11,6 +10,4 @@ eureka:
     registerWithEureka: false
     fetchRegistry: false
     serviceUrl:
-      defaultZone: http://${eureka.instance.hostname:localhost}:${server.port:8000}:${server.contextPath}/eureka/
----
-spring.profiles: dev
+      defaultZone: http://${eureka.instance.hostname:localhost}:${server.port:8000}/eureka/
