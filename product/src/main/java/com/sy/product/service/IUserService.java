@@ -10,11 +10,11 @@ public interface IUserService {
 
     Integer updateUser(UserInfo userInfo);
 
-    List<UserInfo> selectUserById (UserInfo userInfo);
+    List<UserInfo> selectUserById(UserInfo userInfo);
 
-    List<UserInfo> selectUserByName (UserInfo userInfo);
+    List<UserInfo> selectUserByName(UserInfo userInfo);
 
-    List<UserInfo> selectUserBySex (UserInfo userInfo);
+    List<UserInfo> selectUserBySex(UserInfo userInfo);
 
     Integer deleteUserByName(UserInfo userInfo);
 

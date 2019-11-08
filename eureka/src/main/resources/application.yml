@@ -2,7 +2,7 @@ spring:
   application:
     name: eureka
 server:
-  port: 1111
+  port: 8000
   contextPath:
 eureka:
   instance:
@@ -11,6 +11,6 @@ eureka:
     registerWithEureka: false
     fetchRegistry: false
     serviceUrl:
-      defaultZone: http://${eureka.instance.hostname:localhost}:${server.port:1111}:${server.contextPath}/eureka/
+      defaultZone: http://${eureka.instance.hostname:localhost}:${server.port:8000}:${server.contextPath}/eureka/
 ---
 spring.profiles: dev

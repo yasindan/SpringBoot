@@ -6,12 +6,12 @@ spring:
     port: 6379
     password: redis
   datasource:
-    url: jdbc:mysql://47.101.45.123:3306/test
+    url: jdbc:mysql://47.101.45.123:13306/test
     username: root
     password: yasin
     driver-class-name: com.mysql.jdbc.Driver
 server:
-  port: 7001
+  port: 8002
 eureka:
   instance:
     hostname: 127.0.0.1
@@ -19,7 +19,7 @@ eureka:
     register-with-eureka: true
     fetch-registry: false
     service-url:
-      defaultZone: http://127.0.0.1:1111/eureka/
+      defaultZone: http://127.0.0.1:8000/eureka/
 mybatis:
   typeAliasesPackage: com.xdd.entity
   mapperLocations: classpath:mapper/*.xml

@@ -11,6 +11,7 @@ import javax.annotation.Resource;
 public class RedisController {
     @Resource
     private UserService userService;
+
     @GetMapping("/set/")
     public void set() {
         userService.set("key1", new User(1, "sy", 26));
@@ -18,7 +19,7 @@ public class RedisController {
 
     @RequestMapping(value = {"/setKey"}, method = RequestMethod.POST)
     @ResponseBody
-    public void setKey(@RequestBody String key,@RequestBody User user){
+    public void setKey(@RequestBody String key, @RequestBody User user) {
         userService.set(key, user);
     }
 
@@ -26,6 +27,7 @@ public class RedisController {
     public String get() {
         return userService.get("key1").getName();
     }
+
     @GetMapping("stringset")
     public void stringset() {
         userService.setCode("stringkey", "guoxiaoxi");
@@ -34,7 +36,7 @@ public class RedisController {
 
     @RequestMapping(value = {"/setKey/{key}/{value}"}, method = RequestMethod.GET)
     @ResponseBody
-    public void stringsetKey(@PathVariable String key,@PathVariable String value) {
+    public void stringsetKey(@PathVariable String key, @PathVariable String value) {
         userService.setCode(key, value);
     }
 

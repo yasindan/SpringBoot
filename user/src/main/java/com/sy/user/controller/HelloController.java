@@ -12,12 +12,12 @@ public class HelloController {
     HelloService helloService;
 
     @RequestMapping(value = "/shanyu")
-    public String hi(@RequestParam String name){
+    public String hi(@RequestParam String name) {
         return helloService.hiService(name);
     }
 
     @RequestMapping(value = "/info")
-    public String index(){
+    public String index() {
         return "Hello xiaoxi!";
     }
 

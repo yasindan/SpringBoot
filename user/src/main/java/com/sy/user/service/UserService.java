@@ -14,15 +14,19 @@ public class UserService {
     private StringRedisTemplate stringRedisTemplate;
     @Autowired
     private RedisTemplate<String, Object> redisTemplate;
+
     public void set(String key, User user) {
-        redisTemplate.opsForValue().set(key, user,60000, TimeUnit.SECONDS);
+        redisTemplate.opsForValue().set(key, user, 60000, TimeUnit.SECONDS);
     }
+
     public User get(String key) {
         return (User) redisTemplate.boundValueOps(key).get();
     }
+
     public void setCode(String key, String code) {
         stringRedisTemplate.opsForValue().set(key, code, 600000, TimeUnit.SECONDS);
     }
+
     public String getCode(String key) {
         return stringRedisTemplate.boundValueOps(key).get();
     }
